@@ -2,11 +2,11 @@
 
 //////////////// the h1 ////////////////////////
 const funBusLogo = document.querySelector('h1');
-// 1
+// event listener 1
 funBusLogo.addEventListener('click', (event) => {
     event.target.style.color = 'red';
 });
-// 2
+// event listener 2
 funBusLogo.addEventListener('dblclick', (event) => {
     event.target.style.color = 'green';
 });
@@ -14,15 +14,15 @@ funBusLogo.addEventListener('dblclick', (event) => {
 
 //////////////// intro header ///////////////////////
 const welcomeHeader = document.querySelector('.intro');
-// 3
+// event listener 3
 welcomeHeader.addEventListener('mouseenter', (event) => {
     event.target.style.color = 'blue';
 });
-// 4
+// event listener 4
 welcomeHeader.addEventListener('mouseleave', (event) => {
     event.target.style.color = 'black';
 });
-// 5
+// event listener 5
 welcomeHeader.addEventListener('copy', (event) => {
     event.target.style.backgroundColor = 'purple';
 });
@@ -30,27 +30,23 @@ welcomeHeader.addEventListener('copy', (event) => {
 
 ///////////////// nav bar ////////////////////////////
 const navItems = document.querySelector('nav');
-// 6
+// event listener 6
 navItems.addEventListener('mousemove', (event) => {
     event.target.style.color = 'green';
 });
-// 7
+// event listener 7
 navItems.addEventListener('mouseout', (event) => {
     event.target.style.color = 'black';
 });
-// 8
+// event listener 8
 navItems.addEventListener('mousedown', (event) => {
     event.target.style.color = 'yellow';
 });
-// 9
+// event listener 9
 navItems.addEventListener('mouseup', (event) => {
     event.target.style.color = 'orange';
 });
 //////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////
 
 ////////// .stopPropagation() on Destinations Section ///////
 const destino = document.getElementsByClassName('destination');
@@ -58,7 +54,7 @@ const destino = document.getElementsByClassName('destination');
 destino[0].addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'yellow';
 });
-// 10
+// event listener 10
 destino[0].addEventListener('mouseover', (event) => {
     event.target.style.color = 'green';
 });
