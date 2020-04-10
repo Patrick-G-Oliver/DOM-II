@@ -55,18 +55,29 @@ destino[0].addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'yellow';
 });
 // event listener 10
+
 destino[0].addEventListener('mouseover', (event) => {
     event.target.style.color = 'green';
+    event.stopPropagation();
 });
 
-const sunButton = document.getElementsByClassName('btn');
 
-sunButton[0].addEventListener('click', (event) => {
+const sunButton = document.getElementsByClassName('btn');
+/*
+sunButton[0].addEventListener('mouseover', (event) => {
+    event.target.style.color = 'green';
     event.stopPropagation();
-})
+});
+*/
+/*
+sunButton[0].addEventListener('click', (event) => {
+   event.stopPropagation();
+});
+*/
 /////////////////////////////////////////////////////////////
 
 //////// .preventDefault() on nav items /////////////////////
+
 navItems.addEventListener('click', (event) => {
     event.preventDefault();
 });
