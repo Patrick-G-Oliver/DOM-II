@@ -14,22 +14,26 @@ funBusLogo.addEventListener('dblclick', (event) => {
 
 ///////////////// nav bar ////////////////////////////
 const navItems = document.querySelectorAll('.nav-link');
+
+navItems.forEach( (navElement) => {
 // unique event listener 3
-navItems[0].addEventListener('mousemove', (event) => {
-    event.target.style.color = 'green';
-});
+    navElement.addEventListener('mousemove', (event) => {
+        event.target.style.color = 'green';
+    });
 // unique event listener 4
-navItems[0].addEventListener('mouseout', (event) => {
-    event.target.style.color = 'black';
-});
+    navElement.addEventListener('mouseout', (event) => {
+        event.target.style.color = 'black';
+    });
 // unique event listener 5
-navItems[0].addEventListener('mousedown', (event) => {
-    event.target.style.color = 'yellow';
-});
+    navElement.addEventListener('mousedown', (event) => {
+        event.target.style.color = 'yellow';
+    });
 // unique event listener 6
-navItems[0].addEventListener('mouseup', (event) => {
-    event.target.style.color = 'orange';
+    navElement.addEventListener('mouseup', (event) => {
+        event.target.style.color = 'orange';
+    });
 });
+
 
 /////// stopPropagation (see comment on lines 48-49) ///////
 const header = document.querySelector('.main-navigation');
@@ -46,7 +50,7 @@ const nav = document.querySelector('nav');
 
 nav.addEventListener('click', (event) => {
 // .stopPropagation() prevents header's blue click
-// event from bubbling up into nav's red click event. 
+// event from "bubbling up" into nav's red click event. 
     event.stopPropagation();
     event.target.style.backgroundColor = 'red';
 });
@@ -75,11 +79,23 @@ welcomeHeader.addEventListener('copy', (event) => {
 //////////////////////////////////////////////////////
 
 ////////// Destinations Section //////////////////////
+/*
+// with getElement / bracket notation for one item...
 const destino = document.getElementsByClassName('destination');
 // event listener 10
 destino[0].addEventListener('mouseover', (event) => {
     event.stopPropagation();
     event.target.style.color = 'green';
+});
+*/
+// with querySelector / .forEach for all items...
+const destino = document.querySelectorAll('.destination');
+
+destino.forEach( (destinoElement) => {
+// event listener 10
+    destinoElement.addEventListener('mouseover', (event) => {
+        event.target.style.color = 'green';
+    });
 });
 /////////////////////////////////////////////////////////////
 
